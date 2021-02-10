@@ -75,13 +75,13 @@
         <div class="all-container hero-padding">
           <div class="hero-top">
             <h1>Эффективные решения для вашего бизнеса</h1>
-            <button type="button" class="modal-open-btn">
+            <button type="button" class="modal-open-btn" data-modal-open>
               Заказать услугу
             </button>
-            <div class="backdrop is-hidden">
+            <div class="backdrop is-hidden" data-modal>
               <div class="modal">
                 <p>Hello World! Hello World! Hello World!</p>
-              <button class="btn-close">
+              <button class="btn-close" data-modal-close>
                 <svg width="11px" height="11px">
                   <use href="./Images/symbol-defs.svg#icon-close"></use>
                 </svg>
@@ -483,14 +483,6 @@
       </div>
     </footer>
 
-    <script>
-
-      const { height: headerHeight } = document
-      .querySelector( ".page-header" )
-      .getBoundingClientRect();
-
-      document.body.style.paddingTop = '${pageHeaderHeight}px';
-
-    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
