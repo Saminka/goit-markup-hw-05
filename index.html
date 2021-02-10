@@ -49,7 +49,7 @@
               class="a-font-color-light link email-icon link-padding"
               href="mailto:info@devstudio.com"
               >
-              <svg width="" height="" class="email-hover">
+              <svg class="email-hover">
                 <use href="./Images/symbol-defs.svg#icon-email"></use>
               </svg>
               info@devstudio.com</a
@@ -466,5 +466,15 @@
       </div>
       </div>
     </footer>
+
+    <script>
+
+      const { height: headerHeight } = document
+      .querySelector( ".page-header" )
+      .getBoundingClientRect();
+
+      document.body.style.paddingTop = '${pageHeaderHeight}px';
+
+    </script>
   </body>
 </html>
