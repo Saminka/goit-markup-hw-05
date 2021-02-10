@@ -45,6 +45,7 @@ header {
   top: 0;
   left: 0;
   background-color: #ffffff;
+  z-index: 1;
 }
 
 header .link-padding {
@@ -108,6 +109,8 @@ nav .link {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  z-index: 2;
 }
 
 .list-no-style-address {
@@ -319,6 +322,36 @@ h2 {
   border-color: transparent;
   cursor: pointer;
   text-align: center;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 581px;
+  padding: 15px;
+
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 /* ===== /Герой ===== */
@@ -538,27 +571,11 @@ button:focus {
   padding: 63px 24px;
 }
 
-/* .text-action::before {
-  display: inline-block;
-  position: absolute;
-  content: " ";
-
-  opacity: 0;
-} */
-
 .text-action:hover {
   opacity: 1;
 }
 
-/* .cards-bcg:hover {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: var(--font-second-color);
-  opacity: 0.9;
-} */
-*/ .cards-style p {
+.cards-style p {
   margin: 0;
 }
 
